@@ -8,7 +8,10 @@ from openpyxl import Workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 from email.message import EmailMessage
 import smtplib
+import AutoUpdate
 
+AutoUpdate.set_url("https://github.com/AlyssonKrombauer/timlista/blob/c39f531a19d195e931887cdb3d93e16d009ef022/Fatura%20celular%20v2.py")
+AutoUpdate.set_current_version("0.0.2")
 
 lista = pd.read_csv(r"lista.txt", sep=";")
 filiais = pd.read_excel(r"filiais.xlsx")
